@@ -1,0 +1,795 @@
+<HTML>
+<HEAD><TITLE></TITLE></HEAD>
+<BODY>
+
+<table>
+ 
+ <tr>
+ 
+ <td valign="top">
+ <fieldset>
+
+	
+
+	
+
+
+ <legend>
+ <a href="php-smtp.php">PHP</a>
+ </legend>
+ <br>
+ 
+ <table>
+ <tr>
+ <form method="POST" action="">
+ 
+
+	
+
+	
+
+<td valign="top">
+ 
+
+	
+
+	
+
+	
+
+<fieldset>
+
+	
+
+	
+
+
+ 
+
+	
+
+	
+
+	
+
+	
+
+<legend>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+Addresses
+ 
+
+	
+
+	
+
+	
+
+	
+
+</legend>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+From:<br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+<input id="fromfield" name="fromfield" type="text" value="From address" /><br><br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+To:<br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+<input id="tofield" name="tofield" type="text" value="To Address" /><br><br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+CC:<br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+<input id="ccfield" name="ccfield" type="text" value="" /><br><br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+BCC:<br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+<input id="bccfield" name="bccfield" type="text" value="" /><br><br>
+ 
+
+	
+
+	
+
+	
+
+</fieldset>
+ 
+
+	
+
+	
+
+	
+
+</td>
+ 
+
+	
+
+	
+
+	
+
+<td valign="top">
+ 
+
+	
+
+	
+
+	
+
+<fieldset>
+ 
+
+	
+
+	
+
+	
+
+	
+
+<legend>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+Message
+ 
+
+	
+
+	
+
+	
+
+	
+
+</legend>
+ 
+
+	
+
+	
+
+	
+
+	
+
+Subject:<br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+<input id="subjectfield" name="subjectfield" type="text" value="Test Message Subject" /><br><br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+Body:<br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+<textarea rows="3" name="bodyfield" cols="15">Test message body.</textarea><br><br>
+ 
+
+	
+
+	
+
+	
+
+</fieldset>
+ 
+
+	
+
+	
+
+	
+
+</td><td valign="top">
+ 
+
+	
+
+	
+
+	
+
+<fieldset>
+ 
+
+	
+
+	
+
+	
+
+	
+
+<legend>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+Server details
+ 
+
+	
+
+	
+
+	
+
+	
+
+</legend>
+ 
+
+	
+
+	
+
+	
+
+	
+
+SMTP Server:<br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+<input id="serverfield" name="serverfield" type="text" value="mail-fwd" /><br><br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+Port Number:<br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+<input id="portfield" name="portfield" type="text" value="25" /><br><br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+SMTP Auth<br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+<fieldset class="radio">
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+<legend>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+<input id="smtpauthnofield" name="smtpauthfield" type="radio" checked value="0" /> No
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+</legend> 
+ 
+
+	
+
+	
+
+	
+
+	
+
+</fieldset>
+ 
+
+	
+
+	
+
+	
+
+	
+
+<fieldset class="radio">
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+<legend>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+<input id="smtpauthyesfield" name="smtpauthfield" type="radio" value="1" /> Yes 
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+</legend>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+User ID:<br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+<input id="useridfield" name="useridfield" type="text" value="User ID" /><br><br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+Password:<br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+<input id="passwordfield" name="passwordfield" type="text" value="Password" /><br><br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+</fieldset><br><br><br>
+ 
+
+	
+
+	
+
+	
+
+	
+
+<INPUT TYPE="SUBMIT" VALUE="SUBMIT" name="send_mail">
+ 
+
+	
+
+	
+
+	
+
+</fieldset>
+ 
+
+	
+
+	
+
+	
+
+</td>
+ 
+
+	
+
+	
+
+</form>
+ 
+
+	
+
+	
+
+</tr>
+ 
+
+	
+
+</table>
+ 
+ </fieldset>
+ </td>
+ 
+ <td valign="top">
+ <fieldset>
+
+	
+
+	
+
+
+ <legend>
+ <a href="asp-smtp.asp">ASP</a>
+ </legend>
+ <br>
+ </fieldset>
+ </td>
+ 
+ <td valign="top">
+ <fieldset>
+
+	
+
+	
+
+
+ <legend>
+ <a href="vb-net-smtp.aspx">VB .NET</a>
+ </legend>
+ <br>
+ </fieldset>
+ </td>
+ 
+ <td valign="top">
+ <fieldset>
+
+	
+
+	
+
+
+ <legend>
+ <a href="c-net-smtp.aspx">C# .NET</a>
+ </legend>
+ <br>
+ </fieldset>
+ </td>
+ 
+ </table>
+ 
+ <hr>
+ 
+ <?
+ 
+ $fromWho=$_POST['fromfield'];
+ $toWho=$_POST['tofield'];
+ $ccWho=$_POST['ccfield'];
+ $bccWho=$_POST['bccfield'];
+ $Subject=$_POST['subjectfield'];
+ $Body=$_POST['bodyfield'];
+ $MailServer=$_POST['serverfield'];
+ $Port=$_POST['portfield'];
+ $SMTPauth=$_POST['smtpauthfield'];
+ $UserID=$_POST['useridfield'];
+ $Password=$_POST['passwordfield'];
+ 
+ if ($_POST['send_mail']=="SUBMIT") {
+ 
+ 
+ $message = new COM('CDO.Message');
+ $messageCon= new COM('CDO.Configuration') ;
+ try {
+ $message->From = $fromWho;
+ $message->To = $toWho;
+ $message->CC = $ccWho;
+ $message->BCC = $bccWho;
+ $message->Subject = $Subject;
+ $message->HTMLBody = $Body;
+ $messageCon->Fields['http://schemas.microsoft.com/cdo/configuration/smtpserver'] = "$MailServer";
+ $messageCon->Fields['http://schemas.microsoft.com/cdo/configuration/smtpserverport'] = "$Port";
+ $messageCon->Fields['http://schemas.microsoft.com/cdo/configuration/smtpauthenticate'] = "$SMTPauth";
+ $messageCon->Fields['http://schemas.microsoft.com/cdo/configuration/sendusername'] = "$UserID";
+ $messageCon->Fields['http://schemas.microsoft.com/cdo/configuration/sendpassword'] = "$Password";
+ 
+ $messageCon->Fields['http://schemas.microsoft.com/cdo/configuration/sendusing'] = 2 ;
+ $messageCon->Fields['http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout'] = 60 ;
+ 
+ $messageCon->Fields->Update();
+ $message->Configuration = $messageCon;
+ 
+ 
+ 
+ 
+ $message->Send() ;
+ }
+ 
+ catch (com_exception $e) {
+ 
+
+	
+
+print "<hr>\n\n";
+ 
+ 
+
+	
+
+print $e . "\n";
+ }
+ 
+ if ($e === NULL)
+ 
+
+	
+
+print "Message sent successfull.\n\n";
+ else
+ 
+
+	
+
+print "<hr>\n\n";
+ ;
+ }
+ 
+ ?>
+ 
+ </BODY>
+ </HTML>

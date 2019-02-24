@@ -1,0 +1,368 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Typ!" content="text/html; charset=iso-8859-1">
+<title>Fall 2008 Mini-Season &quot;Free Agents&quot; Registration</title>
+<script language="javascript">
+function isEmail(str) 
+{
+  // are regular expressions supported?
+  var supported = 0;
+  if (window.RegExp) {
+    var tempStr = "a";
+    var tempReg = new RegExp(tempStr);
+    if (tempReg.test(tempStr)) supported = 1;
+  }
+  if (!supported) 
+    return (str.indexOf(".") > 2) && (str.indexOf("@") > 0);
+  var r1 = new RegExp("(@.*@)|(\\.\\.)|(@\\.)|(^\\.)");
+  var r2 = new RegExp("^.+\\@(\\[?)[a-zA-Z0-9\\-\\.]+\\.([a-zA-Z]{2,3}|[0-9]{1,3})(\\]?)$");
+  return (!r1.test(str) && r2.test(str));
+}
+
+function validate (theForm)
+{
+  var errStr = "";
+  
+
+   if(theForm.league.value == '')
+  {
+    errStr += "Please select a league in which to participate\n";
+  }
+  
+   if(theForm.division.value == '')
+  {
+    errStr += "Please select a league in which to participate\n";
+  }
+   
+   if(!isEmail(theForm.email.value))
+  {
+    errStr += "Please enter a valid e-mail address\n";
+  }
+  
+  if(theForm.first.value=='' || theForm.last.value=='')
+  {
+    errStr += "Your name is incomplete\n";
+  }
+   
+ 
+  if(errStr != "")
+  {
+    alert("The following problems have occurred\n\n"+errStr);
+	return false;
+  }
+  
+  return true;
+}
+
+function changeDiv()
+{
+  object = document.forms[0].league;
+  button = document.forms[0].Submit;
+  var myDiv = document.getElementById('division');
+
+  if(object[1].selected)
+  {
+    myDiv.innerHTML = '<select name="division">	  <option value="" selected>-- Select A Division --</option>			<option value="A">A</option>	<option value="B">B</option>	</select>';
+  button.disabled = false;
+  }	
+  else if (object[2].selected)
+  {
+    myDiv.innerHTML = '<select name="division">	  <option value="" selected>-- Select A Division --</option>			<option value="B">B</option>	<option value="C">C</option>	</select>';
+	button.disabled = false;
+  }
+	
+	else
+	{
+	 myDiv.innerHTML = 'Please select a league';
+	 button.disabled = true;
+	}
+    
+
+}
+</script>
+<style type="text/css">
+<!--
+.style6 {
+	font-size: 24px;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body background="images/leavestile3.gif">
+<div align="center">
+	<p style="margin-top: 0; margin-bottom: 0"><img src="images/bbeachlogo.jpg" width="719" height="193">
+</div>
+<form name="register" method="post" action="regprocfreeagents.php" onSubmit="return(validate(this))">
+  <div align="center">
+	<table border="0" width="729" id="table1">
+		<tr>
+    <td colspan="2"><div align="center">
+		<p style="margin-top: 0; margin-bottom: 0"><span class="style6">
+		<font color="#800000" face="Comic Sans MS">Fall 2008 
+		Mini-Season &quot;Free Agents&quot; Registration</font></span></div></td>
+  		</tr>
+		<tr>
+			<td width="188">
+			<p align="right">
+			&nbsp;</td>
+			<td width="531">
+			<p align="left"><em><font size="1" color="#808080">(*&nbsp; 
+			indicates field required)</font></em></td>
+		</tr>
+	</table>
+	</div>
+  <table width="685" border="0" align="center" cellpadding="2" cellspacing="0">
+  <tr>
+    <td width="176" bgcolor="#FFFFFF" align="right">
+	<p style="margin-top: 0; margin-bottom: 0"><strong>*Name: </strong></td>
+    <td bgcolor="#FFFFFF">
+	<p style="margin-top: 0; margin-bottom: 0">
+	<input name="name" type="text" id="last" maxlength="50" size="25"></td>
+    <td width="8" bgcolor="#FFFFFF">&nbsp;</td>
+    </tr>
+  <tr>
+    <td valign="top" width="176" bgcolor="#FFFFFF" align="right">
+	<p style="margin-top: 0; margin-bottom: 0"><strong>*Gender: </strong></td>
+    <td colspan="2" bgcolor="#FFFFFF"><p style="margin-top: 0; margin-bottom: 0">
+      <label>
+      <input name="gender" type="radio" value="m" checked>
+  Male</label>
+      <br>
+      <label>
+      <input type="radio" name="gender" value="f">
+  Female</label>
+      <br>
+    </p></td>
+  </tr>
+  <tr>
+    <td width="176" bgcolor="#FFFFFF" align="right">
+	<p style="margin-top: 0; margin-bottom: 0"><strong>Phone:&nbsp; </strong></td>
+    <td colspan="2" bgcolor="#FFFFFF">
+	<p style="margin-top: 0; margin-bottom: 0">
+	<input name="phone" type="text" id="phone" size="10" maxlength="10">&nbsp;
+	<font style="font-size: 9pt" color="#666666">ex. 4105551212, </font>
+	<font color="#666666" size="1">no dashes or extra characters</font></td>
+    </tr>
+  <tr>
+      <td width="176" align="right" height="29"><b>Type:&nbsp; </b></td>
+      <td width="69%" height="29"><select name="contact_type" size="1" id="contact_type">
+		<option selected>Enter Phone Contact Type</option>
+		<option value="Home Phone">Home Phone</option>
+		<option value="Work Phone">Work Phone</option>
+		<option value="Cell Phone">Cell Phone</option>
+		<option value="Email Only">Email Only</option>
+		</select></td>
+    </tr>
+	<tr>
+      <td width="176" align="right"><b>Best Time to Call:&nbsp; </b></td>
+      <td width="69%"><select name="time2call" size="1" id="time2call">
+		<option selected>Enter Best Time to Call</option>
+		<option value="Daytime Only">Daytime Only</option>
+		<option value="Evenings Only">Evenings Only</option>
+		<option value="Anytime">Anytime</option>
+		<option value="Email Only">Email Only</option>
+		</select></td>
+    </tr>
+  <tr>
+    <td width="176" bgcolor="#FFFFFF" align="right">
+	<p style="margin-top: 0; margin-bottom: 0"><strong>*Email: </strong></td>
+    <td bgcolor="#FFFFFF">
+	<p style="margin-top: 0; margin-bottom: 0"><input name="email" type="text" id="email" size="40" maxlength="40"></td>
+    <td width="8" bgcolor="#FFFFFF">&nbsp;</td>
+    </tr>
+  <tr>
+    <td colspan="3" bgcolor="#FFFFFF">
+  	<table border="0" width="107%" id="table3" style="border-style: dotted; border-width: 1px">
+		<tr>
+			<td width="181">
+			&nbsp;</td>
+			<td width="161" bgcolor="#008080">
+			<p align="center" style="margin-top: 0; margin-bottom: 0">
+			<font face="Comic Sans MS" style="font-size: 16pt" color="#FFFFFF">
+		  &nbsp;Wednesdays</font></td>
+			<td width="163" bgcolor="#800000">
+			<p align="center" style="margin-top: 0; margin-bottom: 0">
+			<font face="Comic Sans MS" style="font-size: 16pt" color="#FFFFFF">
+			Thursdays</font></td>
+			<td width="204">
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="181">
+			&nbsp;</td>
+			<td width="161">
+			<p style="margin-top: 0; margin-bottom: 0">
+			<font face="Comic Sans MS">
+			<input name="wc4a" type="checkbox" id="c4a" value="wc4a"> Coed 4's A 
+			Div.</font></td>
+			<td width="163">
+			<p style="margin-top: 0; margin-bottom: 0">
+			<font face="Comic Sans MS">
+			<input name="tc4a" type="checkbox" id="c4a" value="tc4a"> Coed 4's A 
+			Div.</font></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="181">
+			&nbsp;</td>
+			<td width="161">
+			<p style="margin-top: 0; margin-bottom: 0">
+			<font face="Comic Sans MS">
+		  <input name="wc4b" type="checkbox" id="c4b" value="wc4b"> 
+		  	Coed 4's B Div.</font></td>
+			<td width="163">
+			<p style="margin-top: 0; margin-bottom: 0">
+			<font face="Comic Sans MS">
+		  <input name="tc4b" type="checkbox" id="c4b" value="tc4b"> 
+		  	Coed 4's B Div.</font></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="181">
+			&nbsp;</td>
+			<td width="161">
+			<hr align="left" color="#008080"></td>
+			<td width="163">
+			<hr align="left" color="#800000"></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="181">
+			&nbsp;</td>
+			<td width="161">
+			<p style="margin-top: 0; margin-bottom: 0">
+			<font face="Comic Sans MS">
+			<input name="wc6b" type="checkbox" id="c6b" value="wc6b"> Coed 6's B 
+			Div.</font></td>
+			<td width="163">
+			<p style="margin-top: 0; margin-bottom: 0">
+			<font face="Comic Sans MS">
+			<input name="tc6b" type="checkbox" id="c6b" value="tc6b"> Coed 6's B 
+			Div.</font></td>
+		<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="181">
+			&nbsp;</td>
+			<td width="161">
+			<p style="margin-top: 0; margin-bottom: 0">
+			<font face="Comic Sans MS">
+			<input name="wc6c" type="checkbox" id="c6c0" value="wc6c"> Coed 6's 
+			C Div.</font></td>
+			<td width="163">
+			<p style="margin-top: 0; margin-bottom: 0">
+			<font face="Comic Sans MS">
+			<input name="tc6c" type="checkbox" id="c6c1" value="tc6c"> Coed 6's 
+			C Div.</font></td>
+		<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="4">
+	<table border="0" width="94%" id="table4">
+		<tr>
+			<td valign="top" width="175">
+			<p align="right" style="margin-top: 0; margin-bottom: 0"><font face="Comic Sans MS">Comments:</font></td>
+			<td valign="top">
+			<p align="left" style="margin-top: 0; margin-bottom: 0">
+			<textarea name="comments" cols="50" rows="2" id="comments"></textarea></td>
+		</tr>
+	</table>
+  			</td>
+		</tr>
+		</table>
+	</td>
+    </tr>
+  <tr>
+    <td colspan="3" bgcolor="#FFFFFF">
+	<hr></td>
+    </tr>
+  <tr>
+    <td colspan="3" bgcolor="#FFFFFF">
+	<p style="margin-top: 0; margin-bottom: 0"><b>
+		<font style="font-size: 11pt" face="Comic Sans MS">WHEN:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font style="font-size: 6pt" face="Comic Sans MS">&nbsp;&nbsp; </font>
+		<font style="font-size: 11pt" face="Comic Sans MS">&nbsp;&nbsp;</font><font face="Comic Sans MS" size="1">&nbsp; </font>
+		<font style="font-size: 11pt" face="Comic Sans MS">&nbsp; &nbsp;Wednesday 
+	and/or Thursday Nights, starting in September</font></b></td>
+    </tr>
+	<tr>
+    <td colspan="3" bgcolor="#FFFFFF">
+	<p style="margin-top: 0; margin-bottom: 0"><b><font face="Comic Sans MS" style="font-size: 11pt">TIME:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	All games start at 6:15pm - *start date to be announced</font></b></td>
+    </tr>
+	<tr>
+    <td colspan="3" bgcolor="#FFFFFF">
+	<p style="margin-top: 0; margin-bottom: 0"><b><font face="Comic Sans MS" style="font-size: 11pt">WHERE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+	</font></b><font face="Comic Sans MS">Baltimore Beach Volleyball</font>&nbsp;<br>
+	&nbsp;<span title="http://www.baltimorebeach.com/directions.htm" style="font-weight: 700; letter-spacing: -1pt"><font title="http://www.baltimorebeach.com/directions.htm" face="Comic Sans MS" size="2" color="#009999">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+	</font></span>
+	<a title="http://www.baltimorebeach.com/directions.htm" href="directions.htm">
+	<span title="http://www.baltimorebeach.com/directions.htm" style="font-weight: 700; text-decoration: none; letter-spacing: -1pt">
+	<font title="http://www.baltimorebeach.com/directions.htm" face="Comic Sans MS" color="#009999" size="2">
+	Rash Field</font><font title="http://www.baltimorebeach.com/directions.htm" face="Comic Sans MS" color="#009999" size="1"> 
+	@</font><font title="http://www.baltimorebeach.com/directions.htm" face="Comic Sans MS" color="#009999" size="2"> 
+	Baltimore's Inner Harbor</font></span></a></td>
+    </tr>
+  <tr>
+    <td colspan="3" bgcolor="#FFFFFF">
+	<p style="margin-top: 0; margin-bottom: 0"><font face="Comic Sans MS" style="font-size: 11pt">
+	<b>FORMAT:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Coed 4's A &amp; B 
+	divisions, Coed 6's B &amp; C divisions.<br>
+	</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 
+	8 weeks of fall league play includes 1 week of playoffs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></td>
+    </tr>
+  <tr>
+    <td colspan="3" bgcolor="#FFFFFF">
+	<hr></td>
+    </tr>
+  <tr>
+    <td colspan="3" bgcolor="#FFFFFF">
+	<b>NOTICE:&nbsp; </b>This signup is for Free Agent listing only.&nbsp; 
+	Please click on only those divisions you are willing and qualified to play 
+	in. <font color="#666666" size="2"><span style="font-style: italic">(please 
+	do not click on &quot;all&quot; divisions as this will only deter teams and/or 
+	individuals from actually calling you to play)</span> </font>&nbsp;This 
+	&quot;Free Agents&quot; registration does not guarantee placement into the fall 
+	leagues.&nbsp; Baltimore 
+	Beach Volleyball (&quot;BBV&quot;) offers this registration as a courtesy service.&nbsp; 
+	It is your responsibility to contact other &quot;Free Agents&quot; to create your own 
+	team for league play.&nbsp; BBV will attempt to create &quot;Free Agents&quot; teams 
+	in the listed divisions on a &quot;space-available&quot; basis.&nbsp; Please 
+	list only that information you are willing to have shared via the internet - 
+	viewable to anyone.&nbsp; Good Luck!</td>
+    </tr>
+  <tr>
+    <td colspan="3" bgcolor="#FFFFFF">
+	<p align="center">
+	<INPUT TYPE="submit" VALUE="Submit">&nbsp; <INPUT TYPE="reset" VALUE="Reset"></p></td>
+    </tr>
+  </table>
+</form>
+<div align="center">
+	<table border="0" width="625" id="table2">
+		<tr>
+			<td>
+
+<p align="center" style="margin-top: 0; margin-bottom: 0"><font size="1" face="Arial, Helvetica, sans-serif">Copyright ©
+              1999 - 
+                <% = Year(Date) %>
+              2008&nbsp;
+              Baltimore Beach Volleyball Club. All rights reserved. <BR>
+              Revised: 
+                <!--WEBBOT bot=TimeStamp
+    S-Type="EDITED"
+    S-Format="%B %d, %Y" startspan -->August 19, 2008<!--WEBBOT bot=TimeStamp endspan i-checksum="22080" -->
+
+
+
+</p>
+
+			</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Baltimore Beach Volleyball Presents &quot;Clinic with Ryan Mariano&quot;</title>
+<script language="javascript">
+function isEmail(str) 
+{
+  // are regular expressions supported?
+  var supported = 0;
+  if (window.RegExp) {
+    var tempStr = "a";
+    var tempReg = new RegExp(tempStr);
+    if (tempReg.test(tempStr)) supported = 1;
+  }
+  if (!supported) 
+    return (str.indexOf(".") > 2) && (str.indexOf("@") > 0);
+  var r1 = new RegExp("(@.*@)|(\\.\\.)|(@\\.)|(^\\.)");
+  var r2 = new RegExp("^.+\\@(\\[?)[a-zA-Z0-9\\-\\.]+\\.([a-zA-Z]{2,3}|[0-9]{1,3})(\\]?)$");
+  return (!r1.test(str) && r2.test(str));
+}
+
+function validate (theForm)
+{
+  var errStr = "";
+  
+
+   if(theForm.league.value == '')
+  {
+    errStr += "Please select a league in which to participate\n";
+  }
+  
+   if(theForm.division.value == '')
+  {
+    errStr += "Please select a league in which to participate\n";
+  }
+   
+   if(!isEmail(theForm.email.value))
+  {
+    errStr += "Please enter a valid e-mail address\n";
+  }
+  
+  if(theForm.first.value=='' || theForm.last.value=='')
+  {
+    errStr += "Your name is incomplete\n";
+  }
+   
+ 
+  if(errStr != "")
+  {
+    alert("The following problems have occurred\n\n"+errStr);
+	return false;
+  }
+  
+  return true;
+}
+
+</script>
+<script language="Javascript" src="http://gd.geobytes.com/Gd?after=-1"></script>
+<script language="javascript">
+var sLocations="RU,AL,AD,AT,BE,BG,HR,CZ,DK,EE,FO,FI,FR,DE,GI,GR,"+
+"GG,VA,HU,IE,IT,JE,LV,LI,LT,LU,MK,MT,IM,MC,NL,NO,PL,PT,RO,SM,SK,SI,ES,SE,CH,UK,YU";
+if(typeof(sGeobytesLocationCode)!="undefined")
+{
+    var sCountryCode=sGeobytesLocationCode.substring(0,2);
+    if(sLocations.indexOf(sCountryCode)==0)
+    {
+
+          // Visitors from everywhere else would go here
+          document.write("<META HTTP-EQUIV='Refresh' CONTENT='0; URL=http://www.baltimorebeach.com/registration/busted.php'>");
+    }
+}
+</script>
+</head>
+
+<body background="bg.jpg">
+<form name="RegisterProsClinics2011" method="post" action="regprocProRMClinic.php" onSubmit="return(validate(this))">
+<table border="0" width="960">
+	<tr>
+		<td colspan="3" height="54">
+		<p align="center"><font face="Comic Sans MS" size="6" color="#FFE16A">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Baltimore Beach Volleyball Presents:</font></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+		<p align="center">&nbsp;</td>
+		<td width="87%" bgcolor="#000000">
+		<p align="center" style="margin-top: -6px; margin-bottom: -6px">
+		<font size="7">
+		<img border="0" src="ProCli3.jpg" align="left" width="239" height="165" hspace="0"></font></p>
+		<p align="center" style="margin-top: -6px; margin-bottom: -6px">&nbsp;</p>
+		<p align="center" style="margin-top: -6px; margin-bottom: -6px">
+		<font size="7" color="#FFE16A">Clinic with Pro Beach Player:</font></p>
+		<p align="center" style="margin-top: -6px; margin-bottom: -6px"><u>
+		<font size="7" color="#FFE16A">Ryan Mariano</font></u></td>
+	</tr>
+	<tr>
+		<td width="12%" align="center" rowspan="2">
+		<p align="justify">&nbsp;</p>
+		<p align="justify">&nbsp;</td>
+		<td width="85%" align="center" valign="top" colspan="2" height="350">
+		<p style="margin-top: -6px; margin-bottom: -6px"></p><hr>
+		<p style="margin-top: -6px; margin-bottom: -6px">
+		<font face="Comic Sans MS">
+		<img border="0" src="ProCli1.jpg" align="left" width="251" height="302" hspace="3"></font></p>
+		<p align="justify" style="margin-top: -6px; margin-bottom: -6px">
+		<font face="Comic Sans MS">Ryan loves to share his passion and knowledge 
+		of the sport through clinics and lessons. During the 2011 season, Ryan 
+		will be running clinics throughout the United States, including 
+		Baltimore, MD.<br>
+&nbsp;</font></p>
+		<p align="justify" style="margin-top: 0; margin-bottom: 0">
+		<font face="Comic Sans MS">Ryan, born and raised in Lake Forest, 
+		California has competed and excelled on volleyball courts indoors and 
+		out for the past twenty-two years. </font>
+		<img border="0" src="ProCli2.jpg" align="right" width="288" height="214">R<font face="Comic Sans MS">yan 
+		played for the Long Beach State Forty-Niners where he led the NCAA in 
+		aces and digs per game in his sophomore, junior and senior campaigns. 
+		Ryan went on to play international professional indoor volleyball in 
+		Austria and Switzerland. </font></p>
+		<p align="justify" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+		<p align="justify" style="margin-top: 0; margin-bottom: 0">
+		<font size="3"><em>&quot;Ryan brings a lot of energy and knowledge to The 
+		Sand Club clinics. &nbsp;Ryan's interaction with each and every adult and 
+		junior is the biggest benefit of having Ryan running clinics.&quot; 
+		-Allen&nbsp;Alexander</em></font><hr></td>
+	</tr>
+	<tr>
+		<td width="85%" colspan="2" height="275">
+  <table width="625" border="0" align="center" cellpadding="2" cellspacing="0">
+  <tr>
+    <td width="124">
+	<b>
+		<font style="font-size: 11pt" face="Comic Sans MS">WHAT:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></b></td>
+    <td width="493">
+	<span style="font-size: 11pt; font-family: Comic Sans MS; color: black; font-weight: 700">
+	Clinic with Pro Peach volleyball player, Ryan Mariano!!!</span></td>
+    </tr>
+  <tr>
+    <td>
+	<p style="margin-top: 0; margin-bottom: 0"><b>
+		<font style="font-size: 11pt" face="Comic Sans MS">WHEN:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font style="font-size: 6pt" face="Comic Sans MS">&nbsp;&nbsp; </font>
+		<font style="font-size: 11pt" face="Comic Sans MS">&nbsp;&nbsp;&nbsp; </font></b></td>
+    <td>
+	<b>
+		<font style="font-size: 11pt" face="Comic Sans MS">Thursday Night, June 23<sup>rd</sup>, 2011</font></b></td>
+    </tr>
+	<tr>
+    <td>
+	<p style="margin-top: 0; margin-bottom: 0"><b><font face="Comic Sans MS" style="font-size: 11pt">TIME:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Comic Sans MS" size="1">  </font>
+		</b></td>
+    <td>
+	<b>
+		<font face="Comic Sans MS" style="font-size: 11pt"><u>5pm to 7pm</u> 
+	and <u>7pm to 9pm</u> </font></b></td>
+    </tr>
+	<tr>
+    <td>
+	<p style="margin-top: 0; margin-bottom: 0"><b><font face="Comic Sans MS" style="font-size: 11pt">
+	WHERE:&nbsp;&nbsp;&nbsp;&nbsp;
+	</font><font face="Comic Sans MS" size="1">&nbsp;
+	</font><font face="Comic Sans MS">&nbsp;
+	</font></b></td>
+    <td>
+	<b><font face="Comic Sans MS"><span style="font-size: 11pt">Baltimore Beach Volleyball</span></font></b>&nbsp;<span title="http://www.baltimorebeach.com/directions.htm" style="text-decoration: none; "><font title="http://www.baltimorebeach.com/directions.htm">&nbsp;&nbsp;&nbsp; </font></span>
+	<span title="http://www.baltimorebeach.com/directions.htm" style="text-decoration: none; letter-spacing: -1pt">
+	<a title="http://www.baltimorebeach.com/directions.htm" target="_blank" href="http://www.baltimorebeach.com/directions.htm">
+	<font title="http://www.baltimorebeach.com/directions.htm" face="Comic Sans MS" size="2">
+	Rash Field</font><font title="http://www.baltimorebeach.com/directions.htm" face="Comic Sans MS" size="1"> 
+	@</font><font title="http://www.baltimorebeach.com/directions.htm" face="Comic Sans MS" size="2"> 
+	Baltimore's Inner Harbor</font></a></span></td>
+    </tr>
+	<tr>
+    <td>
+	<p style="margin-top: 0; margin-bottom: 0"><b><font face="Comic Sans MS" style="font-size: 11pt">
+	COST:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</font><font face="Comic Sans MS" size="1">&nbsp;&nbsp;&nbsp;
+	</font><font face="Comic Sans MS" style="font-size: 11pt">&nbsp;&nbsp;
+	</font></b></td>
+    <td>
+	<p align="left">
+		<font face="Comic Sans MS">$40 per player - *includes
+	<a target="_blank" href="http://www.powerbalance.com">PowerBalance </a>
+	bracelet<br>
+	<font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	(bracelet valued at $30 or more)</font><br>
+	<span style="font-size: 6pt"><br>
+	</span>&nbsp;<font style="font-size: 9pt">Now accepting PayPal payments&nbsp;<a href="http://www.baltimorebeach.com/registration/PayPalClinics.htm">
+	<img border="0" src="PayPal_mark_37x23.gif" width="37" height="23">
+	<img border="0" src="PayPal2.jpg" width="122" height="22"></a></font></font></td>
+    </tr>
+  <tr>
+    <td height="51" colspan="2">
+	  <p style="margin-top: 0; margin-bottom: 0"><font face="Comic Sans MS" style="font-size: 11pt">
+	    <b>FORMAT:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> </font>
+		<span style="font-family: Comic Sans MS">Clinics with Pro Beach Player: 
+		<b>Ryan 
+		Mariano</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Two clinics offered:&nbsp; <u>5pm to 7pm</u> and <u>7pm to 9pm</u></span></p>
+		<p style="margin-top: 0; margin-bottom: 0">
+		<span style="font-size: 12.0pt; font-family: Comic Sans MS">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		Maximum of 15 players per clinic, so space is limited</span><span style="font-size: 12.0pt; font-family: Comic Sans MS; color: white">
+		</span><br>
+      </p>
+      </td>
+    </tr>
+  <tr>
+    <td height="21" colspan="2">
+	  <hr></td>
+    </tr>
+  </table>
+		</td>
+	</tr>
+	<tr>
+		<td width="12%" height="95">
+		<p align="center">&nbsp;</td>
+		<td width="85%" height="95" colspan="2">
+  <table width="625" border="0" align="center" cellpadding="2" cellspacing="0">
+  <tr>
+    <td width="129" align="right">
+	<p style="margin-top: 0; margin-bottom: 0"><strong>First Name*</strong></td>
+    <td>
+	<p style="margin-top: 0; margin-bottom: 0"><input name="first" type="text" id="first" maxlength="50" tabindex="1"></td>
+    <td width="8">&nbsp;</td>
+    </tr>
+  <tr>
+    <td width="129" align="right">
+	<p style="margin-top: 0; margin-bottom: 0"><strong>Last Name*</strong></td>
+    <td>
+	<p style="margin-top: 0; margin-bottom: 0"><input name="last" type="text" id="last" maxlength="50" tabindex="2"></td>
+    <td width="8">&nbsp;</td>
+    </tr>
+  <tr>
+    <td width="129" align="right">
+	<p style="margin-top: 0; margin-bottom: 0"><strong>Skill Level*</strong></td>
+    <td>
+	<p style="margin-top: 0; margin-bottom: 0">
+	<select name="skilllevel" id="league" onChange="changeDiv()" size="1" tabindex="3">
+	  <option selected>-- Select A Skill Level --</option>
+		
+	<option value="Open">Open (semi-pro)</option>
+	<option value="A">Advanced (A)</option>
+		<option value="B">Intermediate (B)</option>
+		<option value="C">Recreational (C)</option>
+		</select></td>
+    <td width="8">&nbsp;</td>
+    </tr>
+  <tr>
+    <td width="129" align="right">
+	<strong>Clinic Desired*</strong></td>
+    <td>
+	<select size="1" name="clinictime" tabindex="4">
+	<option selected>- Selected Desired Time -</option>
+	<option value="5pm to 7pm">5pm to 7pm</option>
+	<option value="7pm to 9pm">7pm to 9pm</option>
+	</select></td>
+    <td width="8">&nbsp;</td>
+    </tr>
+  <tr>
+    <td valign="top" width="129" align="right">
+	<p style="margin-top: 0; margin-bottom: 0"><strong>Gender*</strong></td>
+    <td colspan="2"><p style="margin-top: 0; margin-bottom: 0">
+      <label>
+      <input name="gender" type="radio" value="m" tabindex="5">
+  Male</label>
+      <br>
+      <label>
+      <input type="radio" name="gender" value="f" tabindex="6">
+  Female</label>
+      <br>
+    </p></td>
+  </tr>
+  <tr>
+    <td width="129" align="right">
+	<p style="margin-top: 0; margin-bottom: 0"><strong>Email*</strong></td>
+    <td>
+	<p style="margin-top: 0; margin-bottom: 0">
+	<input name="email" type="text" id="email" size="40" maxlength="40" tabindex="7"></td>
+    <td width="8">&nbsp;</td>
+    </tr>
+  <tr>
+    <td width="129">&nbsp;</td>
+    <td align="right">
+	<p align="center" style="margin-top: 0; margin-bottom: 0">
+	<input type="submit" value="Register" style="float: left"></td>
+    <td width="8">&nbsp;</td>
+    </tr>
+  </table>
+		</td>
+	</tr>
+</table>
+</form>
+<div align="center">
+	<table border="0" width="659" id="table2">
+		<tr>
+			<td width="492">
+
+<p align="center" style="margin-top: 0; margin-bottom: 0"><font size="1" face="Arial, Helvetica, sans-serif">Copyright ©
+              1999 - 
+                
+              2011&nbsp;
+              Baltimore Beach Volleyball Club. All rights reserved. <BR>
+              Revised: 
+                <!--WEBBOT bot=TimeStamp
+    S-Type="EDITED"
+    S-Format="%B %d, %Y" startspan -->June 11, 2011<!--WEBBOT bot=TimeStamp endspan i-checksum="13904" -->
+
+
+
+</p>
+
+			</td>
+			<td>
+
+&nbsp;</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

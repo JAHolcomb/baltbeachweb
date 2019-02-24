@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Typ!" content="text/html; charset=iso-8859-1">
+<title> "VolleyBoo" Free Agents Tournament Registration </title>
+<script language="javascript">
+function isEmail(str) 
+{
+  // are regular expressions supported?
+  var supported = 0;
+  if (window.RegExp) {
+    var tempStr = "a";
+    var tempReg = new RegExp(tempStr);
+    if (tempReg.test(tempStr)) supported = 1;
+  }
+  if (!supported) 
+    return (str.indexOf(".") > 2) && (str.indexOf("@") > 0);
+  var r1 = new RegExp("(@.*@)|(\\.\\.)|(@\\.)|(^\\.)");
+  var r2 = new RegExp("^.+\\@(\\[?)[a-zA-Z0-9\\-\\.]+\\.([a-zA-Z]{2,3}|[0-9]{1,3})(\\]?)$");
+  return (!r1.test(str) && r2.test(str));
+}
+
+function validate (theForm)
+{
+  var errStr = "";
+  
+
+   if(theForm.league.value == '')
+  {
+    errStr += "Please select a league in which to participate\n";
+  }
+  
+   if(theForm.division.value == '')
+  {
+    errStr += "Please select a league in which to participate\n";
+  }
+   
+   if(!isEmail(theForm.email.value))
+  {
+    errStr += "Please enter a valid e-mail address\n";
+  }
+  
+  if(theForm.first.value=='' || theForm.last.value=='')
+  {
+    errStr += "Your name is incomplete\n";
+  }
+   
+ 
+  if(errStr != "")
+  {
+    alert("The following problems have occurred\n\n"+errStr);
+	return false;
+  }
+  
+  return true;
+}
+
+function changeDiv()
+{
+  object = document.forms[0].league;
+  button = document.forms[0].Submit;
+  var myDiv = document.getElementById('division');
+
+  if(object[1].selected)
+  {
+    myDiv.innerHTML = '<select name="division">	  <option value="" selected>-- Select Division --</option>			<option value="A">A</option>	<option value="B">B</option>	</select>';
+  button.disabled = false;
+  }	
+  else if (object[2].selected)
+  {
+    myDiv.innerHTML = '<select name="division">	  <option value="" selected>-- Select Division --</option>			<option value="B">B</option>	<option value="C">C</option>	</select>';
+	button.disabled = false;
+  }
+	  else if (object[3].selected)
+  {
+    myDiv.innerHTML = '<select name="division">	  <option value="" selected>-- Select Division --</option>			<option value="O">OPEN</option>	<option value="A">A</option>   <option value="B">B</option>	</select>';
+	button.disabled = false;
+  }
+	
+	else
+	{
+	 myDiv.innerHTML = 'Please select a league';
+	 button.disabled = true;
+	}
+    
+
+}
+</script>
+<style type="text/css">
+<!--
+.style6 {
+	font-size: 24px;
+	font-weight: bold;
+}
+body {
+	background-color: #F60;
+}
+.orange_default_font {
+	font-size: 18px;
+	color: #FB9121;
+}
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body style="background-color: #FB9121">
+<form name="register" method="post" action="regprocVBooFA2016.php" onSubmit="return(validate(this))">
+  <div align="center"><img src="volleyboo2.jpg" width="717" height="288">
+    <table border="0" width="70%" id="table3">
+<tr>
+			<td width="56" valign="top">
+			</td>
+			<td valign="top" width="1172" align="left">
+  <div align="center">
+	<table border="0" width="632" id="table4">
+		<tr>
+    <td>
+	<div align="center">
+		<font face="SamdanEvil"><font size="7">Sunday, October 21st, 2018 &quot;VolleyBoo Tournament&quot; 
+		Registration for &quot;Free Agents</font>&quot;</font></div></td>
+  		</tr>
+		</table>
+	</div>
+  <table width="625" border="0" align="center" cellpadding="2" cellspacing="0" id="table5">
+  <tr>
+    <td width="201" align="right">
+	<p style="margin-top: 0; margin-bottom: 0"><strong>*Venue</strong></td>
+    <td width="399">
+	<p style="margin-top: 0; margin-bottom: 0">
+	<select name="league" id="league" onChange="changeDiv()" size="1">
+	  <option selected>-- Select A Venue --</option>
+	  <option value="4">Coed Fours</option>
+	  <option value="6">Coed Sixes</option>
+    </select></td>
+    <td width="13">&nbsp;</td>
+    </tr>
+	<tr>
+    <td width="201" align="right">
+	<p style="margin-top: 0; margin-bottom: 0"><strong>*Division</strong></td>
+    <td width="399"><div id="division">
+		<p style="margin-top: 0; margin-bottom: 0">Please select a division</div></td>
+    <td width="13">&nbsp;</td>
+    </tr>
+	<tr>
+    <td width="201" align="right">
+	<p style="margin-top: 0; margin-bottom: 0"><strong>*First Name</strong></td>
+    <td width="399">
+	<p style="margin-top: 0; margin-bottom: 0">
+	<input name="first" type="text" id="first0" maxlength="50"></td>
+    <td width="13">&nbsp;</td>
+    </tr>
+	<tr>
+    <td width="201" align="right" height="28">
+	<p style="margin-top: 0; margin-bottom: 0"><strong>*Last Name</strong></td>
+    <td height="28" width="399">
+	<p style="margin-top: 0; margin-bottom: 0">
+	<input name="last" type="text" id="last0" maxlength="50"></td>
+    <td width="13" height="28">&nbsp;</td>
+    </tr>
+	<tr>
+    <td valign="top" width="201" align="right">
+	<p style="margin-top: 0; margin-bottom: 0"><strong>*Gender</strong></td>
+    <td colspan="2"><p style="margin-top: 0; margin-bottom: 0">
+      <label>
+      <input name="gender" type="radio" value="M">
+  	<font color="#0000FF">Male</font></label>
+      <br>
+      <label>
+      <input type="radio" name="gender" value="F">
+  <font color="#FF00FF">Female</font></label>
+      <br>
+    </p></td>
+  </tr>
+	<tr>
+    <td width="201" align="right">
+	<p style="margin-top: 0; margin-bottom: 0"><strong>Phone&nbsp;&nbsp; </strong></td>
+    <td colspan="2">
+	<p style="margin-top: 0; margin-bottom: 0">
+	<input name="phone" type="text" id="phone" size="15" maxlength="15">&nbsp;  </td>
+    </tr>
+	<tr>
+    <td width="201" align="right">
+	<p style="margin-top: 0; margin-bottom: 0"><strong>*Email</strong></td>
+    <td width="399">
+	<p style="margin-top: 0; margin-bottom: 0">
+	<input name="email" type="text" id="email0" size="40" maxlength="40"></td>
+    <td width="13">&nbsp;</td>
+    </tr>
+	<tr>
+    <td width="201">
+	<p align="right"><em><font style="font-size: 9pt">(* field required)</font></em></td>
+    <td align="right" width="399">
+	<p align="center" style="margin-top: 0; margin-bottom: 0">
+	<input type="submit" name="Submit0" value="Register" style="float: left"></td>
+    <td width="13">&nbsp;</td>
+    </tr>
+  <tr>
+    <td colspan="3"><hr></td>
+    </tr>
+  <tr>
+    <td colspan="3">
+	<p style="margin-top: 0; margin-bottom: 0"><b>
+	<font face="Comic Sans MS" style="font-size: 11pt">OPTIONS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</font></b><font face="Comic Sans MS">Coed 4's &amp; 6's <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+	<span style="font-size: 11pt">Coed 4's (<font color="#0000FF">A</font>/<font color="#008080">B</font>) or Coed 6's (<font color="#008080">B</font>/C) 
+	</span></font>
+	</td>
+    </tr>
+	<tr>
+    <td colspan="3">
+	<p align="justify"><font face="Comic Sans MS" size="2">NOTE:&nbsp; 
+	Registering as a &quot;Free Agent&quot; does not guarantee entrance into the 
+	tournament.&nbsp; Free Agent teams in the Coed 4's and Coed 6's divisions 
+	will be created on a &quot;space available&quot; basis, based partially on the number 
+	of free agents registered for any one division as well as the space 
+	available within that particular division.&nbsp; Reminder that there must be 
+	5 teams minimum to create any division for this tournament.&nbsp; 
+	Pre-registered and paid teams have priority over free agent teams.&nbsp; 
+	Baltimore Beach Volleyball will do it's very best to place any and all free 
+	agents onto free agents teams, yet reserves the right to change or drop any 
+	free agent team as deemed necessary.&nbsp; </font></p>
+	<p align="justify"><font face="Comic Sans MS" size="2">Baltimore Beach once 
+	again shall attempt to create &quot;Free Agent&quot; teams into 
+	it's &quot;VolleyBoo&quot; 2017 tournament.&nbsp; It is our desire to 
+	make this tournament available to any and all who wish to play in this 
+	tournament, yet might not have a team, or know enough people to form a team 
+	of their own.&nbsp; We want everyone to play and have fun at this event.&nbsp; 
+	Yet we know realistically that some divisions may not have enough, or 
+	perhaps too many teams to compete.&nbsp; In that case, we will ask those 
+	individuals affected who have registered for a non-available division to 
+	change to a different working division, if interested, or we will gladly refund 
+	their registration fee.&nbsp; Priority placement is given first to those 
+	free agent teams who have registered <u>and paid</u> in date and division order 
+	of registration received.&nbsp; Next is date and registration order of 
+	non-paid registrations received, and lastly those &quot;walks ups&quot; in division 
+	order received.&nbsp; </font></td>
+    </tr>
+	<tr>
+    <td colspan="3"><table border="0" width="625" id="table2">
+      <tr>
+        <td><p align="center" style="margin-top: 0; margin-bottom: 0"><font size="1" face="Arial, Helvetica, sans-serif">Copyright ©
+          1999 - 2018
+          Baltimore Beach Volleyball Club. All rights reserved. <BR>
+          Revised:
+          <!--WEBBOT bot=TimeStamp
+    S-Type="EDITED"
+    S-Format="%B %d, %Y" startspan -->October 11, 2018<!--webbot bot="TimeStamp" i-checksum="31040" endspan -->
+        </p></td>
+      </tr>
+    </table>
+	</td>
+    </tr>
+	</table>
+		</td>
+			<td valign="top">
+			</td>
+	  </tr>
+	</table>
+  </div>
+</form>
+<div align="center"></div>
+</body>
+</html>

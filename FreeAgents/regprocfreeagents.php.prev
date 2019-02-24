@@ -1,0 +1,52 @@
+<style type="text/css">
+<!--
+a:link {
+	color: #000000;
+}
+a:visited {
+	color: #000000;
+}
+-->
+</style><?php
+
+if($_POST)
+{
+  foreach ($_POST as $k=>$v)
+ {
+   $t = stripslashes($v);
+   $t = str_replace("'",'&prime;',$t);
+   
+ 	//This only pulls the form field that have been sent to this page.  Checkboxes are only processed if they are checked.
+	//This method therefore only finds the form fields sent for processing and stores the keys and values separately
+	//This only works if the names of the form fields are the same as the column name in the database
+   $vals[] = "'$t'";
+   $keys[] = strtolower($k);
+ }
+ 
+ //These two statements take the arrays and slams it into a comma delimited string
+ $values = implode(',',$vals);
+ $keys = implode(',',$keys);
+
+  //Connect to Database
+//connect to database  
+  require_once('../database.php');
+  
+  $sql = "INSERT INTO freeagents ($keys) VALUES ($values)";
+  mssqlquery($sql);
+    
+  mssqlclose();
+  
+  echo "
+<img border=\"0\" src=\"bbeachlogo.jpg\" width=\"718\" height=\"193\">
+<h3>You Have Been Registered on the Summer 2013 Free Agents 2013 list!</h3>
+<p>
+<strong>Summer League Play Begins the week of July 8th!</strong><br>
+<br>
+<u><strong>REMINDER</strong></u>:  Space is limited!  Signing up for this \"Free Agents\" list does <u>not</u> guarantee entrance into leagues.<br>
+We recommend you contact other \"Free Agents\" and create your own team as soon as possible.  Have fun!<br><br>
+Copyright © 1999 - 2013 Baltimore Beach Volleyball Club. All rights reserved.
+";
+}
+/* */
+ 
+?>

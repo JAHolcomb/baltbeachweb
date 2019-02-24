@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Baltimore Beach Team Registration Page</title>
+<style type="text/css">
+body {
+	background-image: url(../images/bg.jpg);
+}
+.style11 {	color: #000;
+	font-size: 36px;
+}
+.style38 {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+<table width="80%" border="0" align="center">
+  <tr>
+    <th bgcolor="#000000" scope="col"><p><img src="../images/bbvlogo9.jpg" width="1080" height="489" /></p></th>
+  </tr>
+  <tr>
+    <th bgcolor="#FFCC00" scope="col"><span class="style11">Baltimore Beach Volleyball <br />
+      Spring Leagues 2019 <br />
+Team Registration Opens Soon...</span></th>
+  </tr>
+</table>
+<table width="749" border="0" align="center">
+  <tr>
+    <td width="745"><div align="center"><span class="style38">Copyright © 1999 -
+      <?= date("Y") ?>
+      Baltimore Beach Volleyball Club. All rights reserved.</span><br />
+      <span class="style38">Revised: February 6, 2019</span></div></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

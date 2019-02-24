@@ -1,0 +1,58 @@
+    /*
+     * Mail Settings
+     */
+    define ( "MAIL_SERVER"  , "mail2.thudinteractive.com" );
+    define ( "MAIL_PORT"    , 25 );
+    define ( "MAIL_FROM"    , "leagues@baltimorebeach.com" );
+    define ( "MAIL_SUBJECT" , "Team Captain Login Reminder" );
+
+    /*
+     * This function replaces the typical PHP "mail()" function, since it does
+     * not work on this particular server.  In the future, if the site is moved
+     * or upgraded, you may want to replace this to use the typical one.
+     */
+    function sock_mail ( $strServer ,  // Your SMTP Server
+                         $intPort ,    // Your SMTP Port Number
+                         $strFrom ,    // Address you're sending from
+                         $strTo ,      // Address(es) you're sending to
+                         $strSubject , // Subject Line
+                         $strBody )    // Message Body
+    {
+        $sckSMTP = &fsockopen($strServer,$intPort,$strError,$strErrorText,30);
+        if (!$sckSMTP)
+        {
+            echo "<b>" . $strError . " : " . $strErrorText . "</b><br />";
+            return false;
+        }
+        fwrite($sckSMTP , "HELO "      . $_SERVER[SERVER_NAME] . "\r\n" );
+        fwrite($sckSMTP , "MAIL FROM:" . $strFrom              . "\r\n" );
+        fwrite($sckSMTP , "RCPT TO:"   . $strTo                . "\r\n" );
+        fwrite($sckSMTP , "DATA\r\n" );
+        fwrite($sckSMTP , "Subject: "  . $strSubject           . "\r\n" );
+        fwrite($sckSMTP , "\r\n"       . $strBody              . "\r\n" );
+        fwrite($sckSMTP , ".\r\nQUIT\r\n" );
+        fclose($sckSMTP);
+        return true;
+    }
+
+    $strMailTo = $arrPost["cpt_email"];
+    $strMailSubject = "$teamname has been registered at Baltimore Beach!";
+
+    $strMailBody = <<<MAILBODY
+************************************************************
+This is the reminder for your username and password.
+    
+Username: $strCaptainLogin
+Password: $strCaptainPassword
+
+Website: http://www.baltimorebeach.com/cp
+    
+************************************************************    
+MAILBODY;
+
+    sock_mail(MAIL_SERVER,MAIL_PORT,MAIL_FROM,$strMailTo,MAIL_SUBJECT,$strMailBody);
+
+
+create a new line with the following on it
+$strMailSubject = "$teamname has been registered at Baltimore Beach!";
+Then in the sock_mail call at the bottom, replace MAIL_SUBJECT with $strMailSubject

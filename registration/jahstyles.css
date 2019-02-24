@@ -1,0 +1,180 @@
+/* CSS Document */
+body {margin: 0; padding: 0; color:#000000; font-size:12px; font:Verdana, Arial, Helvetica, sans-serif}
+
+a {color:##0000FF}
+
+#footer a {color:#000000}
+#wrapper
+{
+
+	margin:auto
+}
+#banner
+{
+  position: relative;
+  left: 0;
+  top: 0;
+  background-image:url(rmarianoend.jpg);
+  background-repeat:no-repeat;
+  width: 716px;
+  height:193px;
+}
+
+#banner_std
+{
+  position: relative;
+  left: 0;
+  top: 0;
+  background-image:url(bbeachlogo.jpg);
+  background-repeat:no-repeat;
+  width: 716px;
+  height:193px;
+}
+
+#content
+{
+  position: relative;
+	left:0;
+	top:0;
+	width: 320px;
+}
+
+#team
+{
+	position: relative;
+	left: 1px;
+	top: -18px;
+	width: 243px;
+	background-color: #3E3E3E;
+	color: #FFCC33;
+	border: solid 1px black;
+}
+
+#team-list
+{
+	position: relative;
+	left: 10px;
+	top: 0px;
+	width: 700px;
+	background-color: #3E3E3E;
+	color: #FFCC33;
+	border: solid 1px black;
+}
+
+#standings-list
+{
+	position: relative;
+	left: 1px;
+	top: 0px;
+	width: 700px;
+	color: #FFCC33;
+}
+
+#captain
+{
+	position: relative;
+	left: 1px;
+	top: -18px;
+	width: 243px;
+	background-color: #3E3E3E;
+	color: #FFCC33;
+	border: solid 1px black;
+}
+#footer
+{
+  position: relative;
+  top: 100px;
+  left: 0px;
+  padding-left: 10px;
+  border-top: solid 1px black;
+  width: 736px;
+  height: 50px;
+  font-size:11px;
+  
+}
+
+input, select {font-size:10px}
+
+#players
+{
+	position: relative;
+	left: 248px;
+	top: -460px;
+	background-color: #3E3E3E;
+	color: #FFCC33;
+	width: 470px;
+	border: solid 1px black;
+}
+
+
+.style2 {font-size: 12px}
+.style6 {
+	font-size: 18px;
+	font-weight: bold;
+	background-color:#000000;
+	color:#FFCC33;
+}
+.style99 {
+	font-family: "Comic Sans MS";
+	font-size: 18px;
+}
+.style98 {
+	font-size: 14px;
+	font-style: italic;
+}
+
+.style33 {font-family: "Comic Sans MS"}
+.style34 {
+	font-family: "Comic Sans MS";
+	font-size: 18px;
+	color: #0033FF;
+}
+
+
+h3
+{
+	font-size: 24px;
+	font-weight: bold;
+	background-color:#000000;
+	color:#FFCC33;
+	width: 719px;
+	height: 30px;
+	text-align:center;
+}
+
+h2
+{
+	font-size: 18px;
+	font-weight: bold;
+	background-color:#000000;
+	color:#FFCC33;
+	width: 180px;
+	height: 20px;
+	text-align:center;
+}
+.alt
+{
+   background-color:#444444;
+}
+
+.alt2
+{
+   background-color:#3E3E3E;
+}
+
+
+.heading2
+{
+   background-color:#FFCC33;
+   color: #3e3e3e;
+   text-align:center;
+   font-size:24px;
+}
+
+.style7 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+
+.big {font-size: 18px}
